@@ -29,7 +29,7 @@ def convert():
         "Content-Type": "application/json",
     }
     data = {
-        "text": text  # Gửi văn bản nhập vào mà không kèm thêm chuỗi không cần thiết
+        "text": text.strip()  # Gửi văn bản đã được loại bỏ khoảng trắng hoặc chuỗi không cần thiết
     }
 
     response = requests.post(url, headers=headers, json=data)
