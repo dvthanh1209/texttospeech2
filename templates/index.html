@@ -101,8 +101,9 @@
             if (response.ok) {
                 const data = await response.json();
                 const audio = new Audio(data.audio_url);
-                audio.play();  // Tự động phát âm thanh mà không hiển thị thanh phát audio
-                resultDiv.innerHTML = '';  // Không hiển thị thanh phát âm thanh trên giao diện
+                audio.load();  // Load âm thanh trước khi phát
+                audio.play();  // Phát âm thanh tự động
+                resultDiv.innerHTML = '';  // Không hiển thị bất kỳ nội dung gì
             } else {
                 const error = await response.json();
                 resultDiv.innerHTML = `<p>Lỗi: ${error.error}</p>`;
