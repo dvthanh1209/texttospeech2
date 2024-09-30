@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-# Lấy API key từ biến môi trường
+
 api_key = os.environ.get('API_KEY')
 
 @app.route('/')
@@ -29,7 +29,7 @@ def convert():
         "Content-Type": "application/json; charset=utf-8",  # Đảm bảo mã hóa UTF-8
     }
     data = {
-        "text": text.strip()  # Xóa khoảng trắng hoặc ký tự không mong muốn
+        "text": text.strip()  
     }
 
     response = requests.post(url, headers=headers, json=data)
