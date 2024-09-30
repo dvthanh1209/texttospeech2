@@ -26,7 +26,7 @@ def convert():
         "api_key": api_key,
         "voice": voice,
         "speed": str(speed),
-        "Content-Type": "application/json; charset=utf-8",  # Đảm bảo mã hóa UTF-8
+        "Content-Type": "application/json; charset=utf-8",  
     }
     data = {
         "text": text.strip()  
