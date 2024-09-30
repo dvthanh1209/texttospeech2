@@ -26,10 +26,10 @@ def convert():
         "api_key": api_key,
         "voice": voice,
         "speed": str(speed),
-        "Content-Type": "application/json",
+        "Content-Type": "application/json; charset=utf-8",  # Đảm bảo mã hóa UTF-8
     }
     data = {
-        "text": text.strip()  # Gửi văn bản đã được loại bỏ khoảng trắng hoặc chuỗi không cần thiết
+        "text": text.strip()  # Xóa khoảng trắng hoặc ký tự không mong muốn
     }
 
     response = requests.post(url, headers=headers, json=data)
