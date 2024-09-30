@@ -17,7 +17,7 @@ def convert():
     voice = request.form.get('voice', 'banmai')
     speed = request.form.get('speed', 0)
 
-    # Kiểm tra nếu API key chưa được đặt
+    
     if not api_key:
         return jsonify({"error": "API key chưa được cấu hình."}), 500
 
